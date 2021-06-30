@@ -20,6 +20,13 @@
     /* overflow: hidden; */
 }
 
+aside {
+    height: 100%;
+}
+
+main {
+    height: 100%;
+}
 /* -- SIDE BAR ------------- */
 
 /* user */
@@ -86,6 +93,7 @@
 .input-area {
     border: 1px solid #f0f0f0;
     background-color: #fff;
+    height: 40px;
 }
 
 .input-area i {
@@ -107,8 +115,6 @@
     background-color: #fafafa;
     padding-right: 6px;
     height: calc(100% - 160px);
-    /* overflow: hidden; da sistemare */
-    
 }
 
 .contacts {
@@ -164,7 +170,7 @@
 /* message area */
 .message-area {
     background-image: url(../img/mine.jpg);
-    height: calc(100% - 120px);
+    height: calc(100% - 110px);
     overflow-y: scroll;
     
 }
