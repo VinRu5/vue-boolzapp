@@ -16,36 +16,50 @@
             <div class="row view-container">
 
                 <!-- side bar -->
-                <aside class="col-4">
+                <aside class="col-4 p-0">
 
                     <!-- user -->
-                    <div class="user">
+                    <div class="user box-side">
+
                         <div class="user-account">
                             <div class="user-img">
-                                <img src="./img/avatar_io.jpg" alt="user image">
+                                <img src="./img/avatar_8.jpg" alt="user image">
                             </div>
                             <div class="user-name">
                                 Nome Utente
                             </div>
                         </div>
-                        <div class="user-icons">
 
+                        <div class="user-icons">
+                            <i class="fas fa-circle-notch"></i>
+                            <i class="fas fa-comment-alt"></i>
+                            <i class="fas fa-ellipsis-v"></i>
                         </div>
                     </div>
 
                     <!-- notif -->
-                    <div class="notif">
-                        
+                    <div class="notif box-side">
+                        <div>
+                            <div class="notif-icon">
+                                <i class="fas fa-bell-slash"></i>
+                            </div>
+                        </div>
+
+                        <div class="notif-text">
+                            <div class="notif-text-title">Ricevi notifiche di nuovi messaggi</div>
+                            <a href="#">Attiva notifiche desktop</a>
+                        </div>
                     </div>
 
                     <!-- input area -->
                     <div class="input-area">
+                        <i class="fas fa-search"></i>
                         <input type="text">
                     </div>
 
                     <!-- concatcs -->
                     <div class="contacts">
-                        <div v-for="(contact, index) in contacts" class="contact">
+                        <div v-for="(contact, index) in contacts" class="contact box-side">
                             <div class="user-img">
                                 <img :src="'./img/avatar' + contact.avatar + '.jpg'" alt="">
                             </div>
@@ -57,7 +71,7 @@
                 </aside>
 
                 <!-- corpo principale per i messaggi -->
-                <main class="col-8">ciao</main>
+                <main class="col-8 p-0">ciao</main>
             </div>
         </div>
     </div>
