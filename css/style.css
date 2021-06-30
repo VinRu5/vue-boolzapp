@@ -16,7 +16,8 @@
 /* -------------------------------------- */
 .view-container {
     height: calc(100vh - 80px);
-    background-color: #fff
+    background-color: #fff;
+    /* overflow: hidden; */
 }
 
 /* -- SIDE BAR ------------- */
@@ -106,15 +107,16 @@
     background-color: #fafafa;
     padding-right: 6px;
     height: calc(100% - 160px);
-    overflow: hidden; /* da sistemare*/
+    /* overflow: hidden; da sistemare */
     
 }
 
 .contacts {
-    overflow-y: scroll; /* da sistemare*/
+    overflow-y: auto;
     background-color: #fff;
     border-right: 1px groove #fafafa;
     height: 100%;
+    display: block;
 }
 
 .contacts .contact {
@@ -142,6 +144,11 @@
 .info-contact-name {
     display: flex;
     align-items: center;
+    flex-grow: 1;
+}
+
+.info-contact-icons {
+    min-width: 60px;
 }
 
 .user-name {
@@ -189,10 +196,19 @@
 }
 
 /* text-area */
+.text-area .user-icons i {
+    flex-grow: 1;
+}
+
+.text-area .text-message {
+    flex-basis: 90%;
+}
+
 .text-area textarea {
     border: none;
     border-radius: 10px;
     padding: 6px 12px;
+    width: 100%;
 }
 
 .text-area textarea:placeholder-shown {

@@ -16,7 +16,7 @@
             <div class="row view-container">
 
                 <!-- side bar -->
-                <aside class="col-4 p-0">
+                <aside class="col-6 col-sm-5 col-md-4 p-0">
 
                     <!-- user -->
                     <div class="user box-side">
@@ -61,7 +61,7 @@
 
                     <!-- concatcs -->
                     <div class="contacts-container">
-                        <div class="contacts">
+                        <div class="contacts overflow-auto">
                             <div v-for="(contact, index) in contacts" class="contact box-side">
                                 <div class="user-img">
                                     <img :src="'./img/avatar' + contact.avatar + '.jpg'" alt="">
@@ -75,7 +75,7 @@
                 </aside>
 
                 <!-- corpo principale per i messaggi -->
-                <main class="col-8 p-0">
+                <main class="col-6 col-sm-7 col-md-8 p-0">
 
                     <!-- topbar -->
                     <div class="info-contact box-side justify-content-between">
@@ -90,7 +90,7 @@
                             </div>
                         </div>
 
-                        <div class="user-icons">
+                        <div class="user-icons info-contact-icons">
                             <i class="fas fa-search"></i>
                             <i class="fas fa-paperclip"></i>
                             <i class="fas fa-ellipsis-v"></i>
@@ -101,26 +101,26 @@
                     <!-- spazio messaggi -->
                     <div class="message-area container">
                         <div class="row justify-content-end">
-                            <div class="col-5 message message-me">
+                            <div class="col-8 col-md-6 col-lg-5 message message-me">
                                 <div class="message-text">Hai portato a spasso il cane?</div>
                                 <div class="message-date">10/01/2020 15:30:55</div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-5 message message-contact">
+                            <div class="col-8 col-md-6 col-lg-5 message message-contact">
                                 <div class="message-text">Hai portato a spasso il cane?</div>
                                 <div class="message-date">10/01/2020 15:30:55</div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- bottombar -->
-                    <div class="info-contact box-side justify-content-between">
+                    <!-- text-area -->
+                    <div class="text-area info-contact box-side justify-content-between">
                         <div class="user-icons">
                             <i class="far fa-smile"></i>
                         </div>
 
-                        <div class="text-area">
+                        <div class="text-message">
                             <textarea placeholder="Scrivi un messaggio" name="" id="" cols="45" rows="1"></textarea>
                         </div>
 
