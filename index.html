@@ -52,19 +52,23 @@
                     </div>
 
                     <!-- input area -->
-                    <div class="input-area">
-                        <i class="fas fa-search"></i>
-                        <input type="text">
+                    <div class="input-area-container">
+                        <div class="input-area">
+                            <i class="fas fa-search"></i>
+                            <input placeholder="Cerca o inizia una nuova chat" type="text">
+                        </div>
                     </div>
 
                     <!-- concatcs -->
-                    <div class="contacts">
-                        <div v-for="(contact, index) in contacts" class="contact box-side">
-                            <div class="user-img">
-                                <img :src="'./img/avatar' + contact.avatar + '.jpg'" alt="">
-                            </div>
-                            <div class="name-contact">
-                                {{ contact.name }}
+                    <div class="contacts-container">
+                        <div class="contacts">
+                            <div v-for="(contact, index) in contacts" class="contact box-side">
+                                <div class="user-img">
+                                    <img :src="'./img/avatar' + contact.avatar + '.jpg'" alt="">
+                                </div>
+                                <div class="name-contact">
+                                    {{ contact.name }}
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -7,7 +7,7 @@ body {
     height: 60px;
     display: flex;
     align-items: center;
-    padding: 0 12px;
+    padding: 6px 12px;
 }
 
 /* -------------------------------------- */
@@ -64,10 +64,58 @@ body {
 }
 
 .notif .notif-text {
-    font-size: 12px;
+    font-size: 14px;
+    padding-left: 6px;
 }
 
 .notif .notif-text a {
     color: #777;
-    font-size: 10px;
+    font-size: 12px;
+}
+
+/* input area */
+.input-area-container {
+    padding: 6px;
+    background-color: #fafafa;
+}
+.input-area {
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.input-area i {
+    margin: 0 6px;
+    color: #b1b1b1;
+}
+
+.input-area input {
+    width: 85%;
+    border: none;
+}
+
+.input-area input::placeholder{
+    font-size: 12px;
+}
+
+/* contacts */
+.contacts-container {
+    background-color: #fafafa;
+    padding-right: 6px;
+    min-height: calc(100% - 160px);
+
+}
+
+.contacts {
+    overflow-x: auto;
+    background-color: #fff;
+}
+
+.contacts .contact {
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+}
+
+.contacts .contact:first-child {
+    background-color: #fff;
+    border-top: none
 }
