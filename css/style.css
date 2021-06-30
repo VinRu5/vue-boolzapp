@@ -18,6 +18,8 @@
     background-color: #fff
 }
 
+/* -- SIDE BAR ------------- */
+
 /* user */
 .user {
     justify-content: space-between;
@@ -108,7 +110,7 @@
 }
 
 .contacts {
-    overflow-y: auto; /* da sistemare*/
+    overflow-y: scroll; /* da sistemare*/
     background-color: #fff;
     border-right: 1px groove #fafafa;
     height: 100%;
@@ -127,3 +129,44 @@
     border-top: none
 }
 
+/* -- MAIN ------------- */
+
+/* topbar */
+.info-contact {
+    background-color: #eaeaea;
+    border-left: 1px solid #b1b1b1;
+
+}
+
+.info-contact-name {
+    display: flex;
+    align-items: center;
+}
+
+.user-name {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.info-contact-text .access {
+    color: #777;
+    font-size: 12px;
+}
+
+/* message area */
+.message-area {
+    background-image: url(../img/mine.jpg);
+    height: calc(100% - 120px);
+    overflow-y: scroll;
+}
+
+/* text-area */
+.text-area textarea {
+    border: none;
+    border-radius: 10px;
+    padding: 6px 12px;
+}
+
+.text-area textarea:placeholder-shown {
+    font-size: 14px;
+}
