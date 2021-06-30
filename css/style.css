@@ -1,5 +1,7 @@
-body {
-    background-color: #dcdbd3;
+#app {
+    background: linear-gradient(to bottom, #429488 20%, #dcdbd3 0%);
+    height: 100vh;
+    padding-top: 40px;
 }
 
 /* class utility */
@@ -13,7 +15,6 @@ body {
 /* -------------------------------------- */
 .view-container {
     height: calc(100vh - 80px);
-    margin-top: 40px;
     background-color: #fff
 }
 
@@ -79,7 +80,7 @@ body {
     background-color: #fafafa;
 }
 .input-area {
-    border: 1px solid #ddd;
+    border: 1px solid #f0f0f0;
     background-color: #fff;
 }
 
@@ -101,13 +102,16 @@ body {
 .contacts-container {
     background-color: #fafafa;
     padding-right: 6px;
-    min-height: calc(100% - 160px);
-
+    height: calc(100% - 160px);
+    overflow: hidden; /* da sistemare*/
+    
 }
 
 .contacts {
-    overflow-x: auto;
+    overflow-y: auto; /* da sistemare*/
     background-color: #fff;
+    border-right: 1px groove #fafafa;
+    height: 100%;
 }
 
 .contacts .contact {
@@ -115,7 +119,11 @@ body {
     border-top: 1px solid #ddd;
 }
 
+.contacts .contact:hover {
+    background-color: #e8ebeb;
+}
+
 .contacts .contact:first-child {
-    background-color: #fff;
     border-top: none
 }
+
