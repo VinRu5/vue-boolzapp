@@ -90,6 +90,9 @@ new Vue(
                 },
             ]
 
+        },
+        methods: {
+
         }
     }
 )

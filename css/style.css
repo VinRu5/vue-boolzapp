@@ -1,0 +1,38 @@
+body {
+    background-color: #dcdbd3;
+}
+
+.view-container {
+    height: calc(100vh - 80px);
+    margin-top: 40px;
+    background-color: #fff
+}
+
+/* user */
+.user {
+    display: flex;
+    height: 40px;
+    background-color: #eaeaea;
+}
+
+.user-account {
+    display: flex;
+    align-items: center;
+}
+
+.user-img {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 30px;
+    height: 30px;
+}
+
+.user-img img {
+    width: 100%;
+}
+
+/* notifiche */
+notif {
+    background-color: #9fd8f8;
+    height: 40px;
+}

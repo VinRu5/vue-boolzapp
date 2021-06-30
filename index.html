@@ -12,7 +12,54 @@
 </head>
 <body>
     <div id="app">
-        
+        <div class="container view-container">
+            <div class="row view-container">
+
+                <!-- side bar -->
+                <aside class="col-4">
+
+                    <!-- user -->
+                    <div class="user">
+                        <div class="user-account">
+                            <div class="user-img">
+                                <img src="./img/avatar_io.jpg" alt="user image">
+                            </div>
+                            <div class="user-name">
+                                Nome Utente
+                            </div>
+                        </div>
+                        <div class="user-icons">
+
+                        </div>
+                    </div>
+
+                    <!-- notif -->
+                    <div class="notif">
+                        
+                    </div>
+
+                    <!-- input area -->
+                    <div class="input-area">
+                        <input type="text">
+                    </div>
+
+                    <!-- concatcs -->
+                    <div class="contacts">
+                        <div v-for="(contact, index) in contacts" class="contact">
+                            <div class="user-img">
+                                <img :src="'./img/avatar' + contact.avatar + '.jpg'" alt="">
+                            </div>
+                            <div class="name-contact">
+                                {{ contact.name }}
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- corpo principale per i messaggi -->
+                <main class="col-8">ciao</main>
+            </div>
+        </div>
     </div>
 
     <script type="text/javascript" src="./js/script.js"></script>
