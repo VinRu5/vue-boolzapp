@@ -122,37 +122,32 @@ new Vue(
                     }
                 );
                 this.textMessage = '';
-                // let set = setTimeout(function() {
-                //     console.log(avvio);
-                //     console.log(this.contacts[this.contactIndex])
-                //     this.contacts[this.contactIndex].messages.push(
-                //         {
-                //             date: '01/07/2021 11:41:34',
-                //             text: 'OK!',
-                //             status: 'received'
-                //         }
-                //     );
-                // }, 1000);
+                this.receivedMessage();
             },
-            // receivedMessage: function() {
-            //     this.intervall = setTimeout(() => {
-            //         console.log(avvio);
-            //     }, 1000);
-            // },
-            searchContact: function() {
-                return this.contacts.filter((contact) => {
-                    if (this.search === '') {
-                        return true
-                    }
-
-                    for (let x = 0; x < contact.name.length; x++) {
-                        if (this.search === contact.name[x]) {
-                            return true
+            receivedMessage: function() {
+                setTimeout(() => {
+                    this.contacts[this.contactIndex].messages.push(
+                        {
+                            date: '01/07/2021 11:41:34',
+                            text: 'ok',
+                            status: 'received'
                         }
-                    }
+                    )
+                }, 1000);
+            },
+            // searchContact: function() {
+            //     this.searchProfile = this.contacts.filter((contact) => {
+            //         if (this.search === '') {
+            //             return true
+            //         }
 
-                });
-            }
+            //         if (contact.name.includes(this.search)) {
+            //             return true
+            //         }
+            //     });
+            //     console.log(this.searchProfile);
+            //     return this.searchProfile;
+            // }
         }
     }
 )
