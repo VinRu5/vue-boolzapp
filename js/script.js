@@ -89,7 +89,8 @@ new Vue(
                     ],
                 },
             ],
-            contactIndex: 0
+            contactIndex: 0,
+
 
         },
         created() {
@@ -103,6 +104,12 @@ new Vue(
             selectChat: function(index) {
                 this.contactIndex = index;
             },
+            urlImg: function (index) {
+                return `./img/avatar${this.contacts[index].avatar}.jpg`;
+            },
+            urlImgTop: function() {
+                return `./img/avatar${this.contacts[this.contactIndex].avatar}.jpg`;
+            }
         }
     }
 )
