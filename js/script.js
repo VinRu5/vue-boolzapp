@@ -90,7 +90,10 @@ new Vue(
                 },
             ],
             contactIndex: 0,
-            textMessage: ''
+            textMessage: '',
+            intervall: null,
+            search: '',
+            searchProfile: []
 
         },
         created() {
@@ -119,6 +122,33 @@ new Vue(
                     }
                 );
                 this.textMessage = '';
+                // let set = setTimeout(function() {
+                //     console.log(avvio);
+                //     console.log(this.contacts[this.contactIndex])
+                //     this.contacts[this.contactIndex].messages.push(
+                //         {
+                //             date: '01/07/2021 11:41:34',
+                //             text: 'OK!',
+                //             status: 'received'
+                //         }
+                //     );
+                // }, 1000);
+            },
+            // receivedMessage: function() {
+            //     this.intervall = setTimeout(() => {
+            //         console.log(avvio);
+            //     }, 1000);
+            // },
+            searchContact: function() {
+                return this.contacts.filter((contact) => {
+                    if (this.search === '') {
+                        return true
+                    }
+
+                    if (this.search === contact.name) {
+                        return true
+                    }
+                });
             }
         }
     }
