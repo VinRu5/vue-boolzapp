@@ -145,9 +145,12 @@ new Vue(
                         return true
                     }
 
-                    if (this.search === contact.name) {
-                        return true
+                    for (let x = 0; x < contact.name.length; x++) {
+                        if (this.search === contact.name[x]) {
+                            return true
+                        }
                     }
+
                 });
             }
         }
