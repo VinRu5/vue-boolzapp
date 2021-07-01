@@ -88,11 +88,20 @@ new Vue(
                         }
                     ],
                 },
-            ]
+            ],
+            contactIndex: 0
 
         },
+        created() {
+            this.selectChat();
+        },
         methods: {
-
+            selectChat: function() {
+                let contactMessage = this.contacts[this.contactIndex].messages;
+                console.log(contactMessage);
+                console.log(contactMessage[1].text);
+                return contactMessage;
+            }
         }
     }
 )

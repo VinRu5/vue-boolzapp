@@ -183,12 +183,16 @@ main {
     position: relative;
 }
 
-.message-me {
+.sent {
+    justify-content: flex-end;
+}
+
+.sent .message{
     background-color: #DCF8BF;
     margin-right: 24px;
 }
 
-.message-contact {
+.received .message {
     background-color: #fff;
     margin-left: 24px;
 }

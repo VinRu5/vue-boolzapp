@@ -85,7 +85,7 @@
                             </div>
 
                             <div class="info-contact-text">
-                                <div class="user-name">Michele</div>
+                                <div class="user-name">{{ contacts[contactIndex].name }}</div>
                                 <div class="access">Ultimo accesso oggi alle</div>
                             </div>
                         </div>
@@ -100,16 +100,10 @@
 
                     <!-- spazio messaggi -->
                     <div class="message-area container">
-                        <div class="row justify-content-end">
-                            <div class="col-8 col-md-6 col-lg-5 message message-me">
-                                <div class="message-text">Hai portato a spasso il cane?</div>
-                                <div class="message-date">10/01/2020 15:30:55</div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-8 col-md-6 col-lg-5 message message-contact">
-                                <div class="message-text">Hai portato a spasso il cane?</div>
-                                <div class="message-date">10/01/2020 15:30:55</div>
+                        <div v-for="message in selectChat()"  class="row" :class="message.status">
+                            <div class="col-8 col-md-6 col-lg-5 message">
+                                <div class="message-text">{{ message.text }}</div>
+                                <div class="message-date">{{ message.date }}</div>
                             </div>
                         </div>
                     </div>
