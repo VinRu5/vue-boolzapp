@@ -59,10 +59,10 @@
                         </div>
                     </div>
 
-                    <!-- concatcs -->
+                    <!-- conctacs -->
                     <div class="contacts-container">
                         <div class="contacts overflow-auto">
-                            <div v-for="(contact, index) in contacts" class="contact box-side">
+                            <div v-for="(contact, index) in contacts" @click="selectChat(index)" class="contact box-side">
                                 <div class="user-img">
                                     <img :src="'./img/avatar' + contact.avatar + '.jpg'" alt="">
                                 </div>
@@ -81,7 +81,7 @@
                     <div class="info-contact box-side justify-content-between">
                         <div class="info-contact-name">
                             <div class="user-img">
-                                <img src="./img/avatar_1.jpg" alt="image contact">
+                                <img :src="'./img/avatar' + contacts[contactIndex].avatar + '.jpg'" alt="image contact">
                             </div>
 
                             <div class="info-contact-text">
@@ -100,7 +100,7 @@
 
                     <!-- spazio messaggi -->
                     <div class="message-area container">
-                        <div v-for="message in selectChat()"  class="row" :class="message.status">
+                        <div v-for="message in printChat()"  class="row" :class="message.status">
                             <div class="col-8 col-md-6 col-lg-5 message">
                                 <div class="message-text">{{ message.text }}</div>
                                 <div class="message-date">{{ message.date }}</div>

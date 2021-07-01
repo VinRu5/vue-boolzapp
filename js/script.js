@@ -93,15 +93,16 @@ new Vue(
 
         },
         created() {
-            this.selectChat();
+
         },
         methods: {
-            selectChat: function() {
-                let contactMessage = this.contacts[this.contactIndex].messages;
-                console.log(contactMessage);
-                console.log(contactMessage[1].text);
-                return contactMessage;
-            }
+            printChat: function() {
+                return this.contacts[this.contactIndex].messages;
+
+            },
+            selectChat: function(index) {
+                this.contactIndex = index;
+            },
         }
     }
 )
