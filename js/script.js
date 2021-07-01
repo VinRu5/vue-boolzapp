@@ -108,7 +108,9 @@ new Vue(
                 this.contactIndex = index;
             },
             urlImg: function (index) {
+                
                 return `./img/avatar${this.contacts[index].avatar}.jpg`;
+
             },
             urlImgTop: function() {
                 return `./img/avatar${this.contacts[this.contactIndex].avatar}.jpg`;
@@ -135,19 +137,23 @@ new Vue(
                     )
                 }, 1000);
             },
-            // searchContact: function() {
-            //     this.searchProfile = this.contacts.filter((contact) => {
-            //         if (this.search === '') {
-            //             return true
-            //         }
-
-            //         if (contact.name.includes(this.search)) {
-            //             return true
-            //         }
-            //     });
-            //     console.log(this.searchProfile);
-            //     return this.searchProfile;
-            // }
+            searchContact: function() {
+                return this.contacts.filter((contact) => {
+                    if (this.search === '') {
+                        return true;
+                    };
+                      
+                    for (let i = 0; i < this.search.length; i++) {
+                        debugger;
+                        for (let x = 0; x < contact.name.length; x++) {
+    
+                            if (this.search[i] === contact.name[x]) {
+                                return true;
+                            }
+                        }
+                    }
+                });
+            }
         }
     }
 )
