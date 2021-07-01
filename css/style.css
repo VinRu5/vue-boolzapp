@@ -214,13 +214,13 @@ main {
     flex-basis: 90%;
 }
 
-.text-area textarea {
+.text-area input {
     border: none;
-    border-radius: 10px;
+    border-radius: 6px;
     padding: 6px 12px;
     width: 100%;
 }
 
-.text-area textarea:placeholder-shown {
+.text-area input::placeholder{
     font-size: 14px;
 }

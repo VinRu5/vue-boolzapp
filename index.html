@@ -115,7 +115,8 @@
                         </div>
 
                         <div class="text-message">
-                            <textarea placeholder="Scrivi un messaggio" name="" id="" cols="45" rows="1"></textarea>
+                            <input v-model="textMessage" @keyup.enter="sendMessage()" placeholder="Scrivi un messaggio" type="text">
+                
                         </div>
 
                         <div class="user-icons">

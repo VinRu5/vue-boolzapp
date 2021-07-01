@@ -90,7 +90,7 @@ new Vue(
                 },
             ],
             contactIndex: 0,
-
+            textMessage: ''
 
         },
         created() {
@@ -109,6 +109,16 @@ new Vue(
             },
             urlImgTop: function() {
                 return `./img/avatar${this.contacts[this.contactIndex].avatar}.jpg`;
+            },
+            sendMessage: function() {
+                this.contacts[this.contactIndex].messages.push(
+                    {
+                        date: '01/07/2021 11:41:34',
+                        text: this.textMessage,
+                        status: 'sent'
+                    }
+                );
+                this.textMessage = '';
             }
         }
     }
