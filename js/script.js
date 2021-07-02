@@ -183,7 +183,11 @@ new Vue(
 
         },
         methods: {
-            printChat: function() {
+            nowChat: {
+
+            },
+            printChat: function(index) {
+                console.log(this.searchContact()[this.contactIndex].messages);
                 return this.searchContact()[this.contactIndex].messages;
 
             },
@@ -222,14 +226,12 @@ new Vue(
                 }, 1000);
             },
             searchContact: function() {
-                console.log('avvio');
-                let array = this.contacts.filter((contact) => {
+                
+                return this.contacts.filter((contact) => {
                     if (contact.name.includes(this.search)) {
                         return true;
                     }
                 });
-                console.log(array);
-                return array;
             },
             nowDate: function() {
                 return dayjs().format('DD/MM/YYYY HH:mm:ss');
