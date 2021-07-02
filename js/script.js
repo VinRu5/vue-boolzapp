@@ -269,6 +269,11 @@ new Vue(
 
             deleteMessage: function(index) {
                 this.printChat().splice(index, 1);
+            },
+
+            lastMessageDate: function(contact) {
+                let lastIndex = contact.messages.length - 1;
+                return contact.messages[lastIndex].date;
             }
         }
     }
