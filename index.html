@@ -101,13 +101,13 @@
 
                     <!-- spazio messaggi -->
                     <div class="message-area container">
-                        <div v-for="message in printChat()"  class="row" :class="message.status">
+                        <div v-for="(message, index) in printChat()"  class="row" :class="message.status">
                             <div class="col-8 col-md-6 col-lg-5 message">
                                 <div class="row">
                                     <div class="message-text col-10">{{ message.text }}</div>
-                                    <i class="fas fa-angle-down col-2"></i>
+                                    <i @click="activeMenu(message)" class="fas fa-angle-down col-2"></i>
                                 </div>
-                                <div class="menu">
+                                <div v-if="message.showMenu" class="menu">
                                     <div>Message info</div>
                                     <div>Delete message</div>
                                 </div>
