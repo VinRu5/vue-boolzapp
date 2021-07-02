@@ -184,7 +184,7 @@ new Vue(
         },
         methods: {
             printChat: function() {
-                return this.contacts[this.contactIndex].messages;
+                return this.searchContact()[this.contactIndex].messages;
 
             },
             selectChat: function(index) {
@@ -192,16 +192,17 @@ new Vue(
             },
             urlImg: function (index) {
                 
-                return `./img/avatar${this.contacts[index].avatar}.jpg`;
+                return `./img/avatar${this.searchContact()[index].avatar}.jpg`;
 
             },
             urlImgTop: function() {
-                return `./img/avatar${this.contacts[this.contactIndex].avatar}.jpg`;
+
+                return `./img/avatar${this.searchContact()[this.contactIndex].avatar}.jpg`;
             },
             sendMessage: function() {
-                this.contacts[this.contactIndex].messages.push(
+                this.searchContact()[this.contactIndex].messages.push(
                     {
-                        date: '01/07/2021 11:41:34',
+                        date: this.nowDate(),
                         text: this.textMessage,
                         status: 'sent'
                     }
@@ -211,9 +212,9 @@ new Vue(
             },
             receivedMessage: function() {
                 setTimeout(() => {
-                    this.contacts[this.contactIndex].messages.push(
+                    this.searchContact()[this.contactIndex].messages.push(
                         {
-                            date: '01/07/2021 11:41:34',
+                            date: this.nowDate(),
                             text: 'ok',
                             status: 'received'
                         }
@@ -221,11 +222,17 @@ new Vue(
                 }, 1000);
             },
             searchContact: function() {
-                return this.contacts.filter((contact) => {
+                console.log('avvio');
+                let array = this.contacts.filter((contact) => {
                     if (contact.name.includes(this.search)) {
                         return true;
                     }
                 });
+                console.log(array);
+                return array;
+            },
+            nowDate: function() {
+                return dayjs().format('DD/MM/YYYY HH:mm:ss');
             }
         }
     }
