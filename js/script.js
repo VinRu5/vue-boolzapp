@@ -174,35 +174,33 @@ new Vue(
             ],
             contactIndex: 0,
             textMessage: '',
-            intervall: null,
             search: '',
-            searchProfile: null
 
         },
-        created() {
 
-        },
         methods: {
-            nowChat: {
 
-            },
             printChat: function() {
                 console.log(this.contacts[this.contactIndex].messages);
                 return this.contacts[this.contactIndex].messages;
 
             },
+
             selectChat: function(index) {
                 this.contactIndex = index;
             },
+
             urlImg: function (index) {
                 
                 return `./img/avatar${this.contacts[index].avatar}.jpg`;
 
             },
+
             urlImgTop: function() {
 
                 return `./img/avatar${this.contacts[this.contactIndex].avatar}.jpg`;
             },
+
             sendMessage: function() {
                 this.contacts[this.contactIndex].messages.push(
                     {
@@ -214,19 +212,21 @@ new Vue(
                 this.textMessage = '';
                 this.receivedMessage();
             },
+
             receivedMessage: function() {
                 setTimeout(() => {
                     this.contacts[this.contactIndex].messages.push(
                         {
                             date: this.nowDate(),
-                            text: 'ok',
+                            text: 'Ok',
                             status: 'received'
                         }
                     )
                 }, 1000);
             },
-            searchContact: function(index) {
-                let lowerName = this.contacts[index].name.toLowerCase();
+
+            searchContact: function(contact) {
+                let lowerName = contact.name.toLowerCase();
                 let lowerSearch = this.search.toLowerCase();
 
                 if (lowerName.includes(lowerSearch)){
@@ -234,16 +234,8 @@ new Vue(
                 } else {
                     return false
                 }
-                // return this.contacts.filter((contact) => {
-                //     let lowerName = contact.name.toLowerCase();
-                //     let lowerSearch = this.search.toLowerCase();
-                //     if (lowerName.includes(lowerSearch)) {
-                //         return true;
-                //     } else {
-                //         return false;
-                //     }
-                // });
             },
+
             nowDate: function() {
                 return dayjs().format('DD/MM/YYYY HH:mm:ss');
             }

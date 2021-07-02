@@ -63,11 +63,11 @@
                     <!-- conctacs -->
                     <div class="contacts-container">
                         <div class="contacts overflow-auto">
-                            <div v-for="(contact, index) in contacts" v-if="searchContact(index)" @click="selectChat(index)" class="contact box-side">
+                            <div v-for="(contact, index) in contacts" v-if="searchContact(contact)" @click="selectChat(index)" class="contact box-side">
                                 <div class="user-img">
                                     <img :src="urlImg(index)" alt="">
                                 </div>
-                                <div class="name-contact">
+                                <div class="user-name">
                                     {{ contact.name }}
                                 </div>
                             </div>
@@ -85,8 +85,8 @@
                                 <img :src="urlImgTop()" alt="image contact">
                             </div>
 
-                            <div class="info-contact-text">
-                                <div class="user-name">{{ contacts[contactIndex].name }}</div>
+                            <div class="info-contact-text user-name">
+                                <div class="">{{ contacts[contactIndex].name }}</div>
                                 <div class="access">Ultimo accesso oggi alle</div>
                             </div>
                         </div>
@@ -103,7 +103,14 @@
                     <div class="message-area container">
                         <div v-for="message in printChat()"  class="row" :class="message.status">
                             <div class="col-8 col-md-6 col-lg-5 message">
-                                <div class="message-text">{{ message.text }}</div>
+                                <div class="row">
+                                    <div class="message-text col-10">{{ message.text }}</div>
+                                    <i class="fas fa-angle-down col-2"></i>
+                                </div>
+                                <div class="menu">
+                                    <div>Message info</div>
+                                    <div>Delete message</div>
+                                </div>
                                 <div class="message-date">{{ message.date }}</div>
                             </div>
                         </div>

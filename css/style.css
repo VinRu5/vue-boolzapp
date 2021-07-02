@@ -59,6 +59,7 @@ main {
 /* notifiche */
 .notif {
     background-color: #9fd8f8;
+    height: 70px;
 }
 
 .notif .notif-icon {
@@ -94,6 +95,8 @@ main {
     border: 1px solid #f0f0f0;
     background-color: #fff;
     height: 40px;
+    display: flex;
+    align-items: center;
 }
 
 .input-area i {
@@ -114,7 +117,7 @@ main {
 .contacts-container {
     background-color: #fafafa;
     padding-right: 6px;
-    height: calc(100% - 160px);
+    height: calc(100% - 170px);
 }
 
 .contacts {
@@ -158,6 +161,7 @@ main {
 }
 
 .user-name {
+    padding: 6px;
     font-weight: 500;
     font-size: 16px;
 }
@@ -177,10 +181,14 @@ main {
 
 .message {
     border-radius: 12px;
-    padding: 12px;
+    padding: 12px 24px 18px 12px;
     margin-bottom: 12px;
     margin-top: 12px;
     position: relative;
+}
+
+.message i {
+    color: #777;
 }
 
 .sent {
@@ -205,6 +213,27 @@ main {
     font-size: 10px;
 }
 
+/* menu delete message */
+.menu {
+    width: 150px;
+    background-color: #fafafa;
+    border-radius: 3px;
+    box-shadow: 0px 0px 8px grey;
+    font-size: 14px;
+    position: absolute;
+    top: 32px;
+    right: 12px;
+    z-index: 2;
+}
+
+.menu div {
+    padding: 6px 18px;
+}
+
+.menu div:hover {
+    background-color: #dcdbd3;
+}
+
 /* text-area */
 .text-area .user-icons i {
     flex-grow: 1;
@@ -224,3 +253,5 @@ main {
 .text-area input::placeholder{
     font-size: 14px;
 }
+
+
