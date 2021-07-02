@@ -199,10 +199,6 @@ new Vue(
             search: '',
         },
 
-        mounted() {
-
-        },
-
         methods: {
 
             printChat: function() {
@@ -269,6 +265,10 @@ new Vue(
 
                 message.showMenu = !message.showMenu;
 
+            },
+
+            deleteMessage: function(index) {
+                this.printChat().splice(index, 1);
             }
         }
     }

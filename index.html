@@ -109,7 +109,7 @@
                                 </div>
                                 <div v-if="message.showMenu" class="menu">
                                     <div>Message info</div>
-                                    <div>Delete message</div>
+                                    <div @click="deleteMessage(index)">Delete message</div>
                                 </div>
                                 <div class="message-date">{{ message.date }}</div>
                             </div>
